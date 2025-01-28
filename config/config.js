@@ -1,4 +1,4 @@
-var g = 'uk21freenew.listen2myradio.com'; // URL SANS HTTP:// - IP WITHOUT HTTP:// - Radionomy : streaming.radionomy.com
+var g = '82.145.41.8'; // URL SANS HTTP:// - IP WITHOUT HTTP:// - Radionomy : streaming.radionomy.com
 var h = '16123' ; // PORT - Radionomy : 80
 var z = '/;stream.mp3'; // Shoutcast='/;stream.mp3'
 var i = ''; // Icecast='/mount' - Shoutcast='' - Radionomy : /radioname
