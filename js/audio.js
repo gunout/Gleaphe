@@ -1,5 +1,5 @@
    // Construct the streaming URL
-  var streamURL = "http://" + g + ":" + h + i + z;
+  var streamURL = "https://" + g + ":" + h + i + z;
 
   // Define the stream object
   var stream = { mp3: streamURL };
