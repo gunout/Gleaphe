@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // Construction de l'URL du flux
-  var streamURL = "https://" + g + ":" + h + i + z;
+  var streamURL = "http://" + g + ":" + h + i + z;
 
   // Définition de l'objet stream
   var stream = { mp3: streamURL };
