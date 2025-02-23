@@ -1,1 +1,37 @@
-$(document).ready(function(){var stream = {mp3: "g" + ":" "h" + "i" + "z",},ready=false;$("#jquery_jplayer_1").jPlayer({ready:function(event){ready=true;$(this).jPlayer("setMedia",stream).jPlayer("play");},pause:function(){$(this).jPlayer("clearMedia");},error:function(event){if(ready&&event.jPlayer.error.type===$.jPlayer.error.URL_NOT_SET){$(this).jPlayer("setMedia",stream).jPlayer("play");}},stop:function(event){console.log("stop");$(this).jPlayer("setMedia",stream).jPlayer("play");},swfPath:"js",volume:"0.5",supplied:"mp3",preload:"none",autoPlay:true,wmode:"window",keyEnabled:true,});});var j="extralarge",k="img/nocover.png",a="",b="",c="",d="https://",e="128",f="audio/mpeg",m="TRUE",n="TURE",o="FR",p="TRUE",q="TRUE",r=":",s="TRUE",t="TRUE",u="FALSE",v="FALSE";
+$(document).ready(function () {
+  // Construction de l'URL du flux
+  var streamURL = "https://" + g + ":" + h + i + z;
+
+  // Définition de l'objet stream
+  var stream = { mp3: streamURL };
+
+  // Initialisation de jPlayer
+  $("#jquery_jplayer_1").jPlayer({
+    ready: function (event) {
+      // Définir le média et jouer lorsque prêt
+      $(this).jPlayer("setMedia", stream).jPlayer("play");
+    },
+    pause: function () {
+      // Effacer le média en pause
+      $(this).jPlayer("clearMedia");
+    },
+    error: function (event) {
+      // Gérer les erreurs (par exemple, réessayer si l'URL n'est pas définie)
+      if (event.jPlayer.error.type === $.jPlayer.error.URL_NOT_SET) {
+        $(this).jPlayer("setMedia", stream).jPlayer("play");
+      }
+    },
+    stop: function (event) {
+      // Journaliser l'événement d'arrêt et redémarrer la lecture
+      console.log("stop");
+      $(this).jPlayer("setMedia", stream).jPlayer("play");
+    },
+    swfPath: "js", // Chemin vers le fallback Flash (si nécessaire)
+    supplied: "mp3", // Spécifier le format média
+    preload: "none", // Ne pas précharger le média
+    volume: 0.5, // Définir le volume initial
+    autoPlay: true, // Lire automatiquement le flux
+    wmode: "window", // Définir le mode fenêtre pour Flash
+    keyEnabled: true, // Activer les contrôles clavier
+  });
+});
