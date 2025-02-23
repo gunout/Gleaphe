@@ -1,5 +1,4 @@
-var g = 'https://102.35.99.37'; // URL SANS HTTP:// - IP WITHOUT HTTP:// - Radionomy : streaming.radionomy.com
-var h = '8002' ; // PORT - Radionomy : 80
-var z = '/;stream.mp3'; // Shoutcast='/;stream.mp3'
-var i = ''; // Icecast='/mount' - Shoutcast='' - Radionomy : /radioname
-var l = ''; // Radionomy GUID (For Current Listen)
+var g = '102.35.99.37'; // Remplacez par l'URL ou l'IP de votre serveur
+var h = '8002'; // Remplacez par le port de votre serveur
+var z = '/;stream.mp3'; // Chemin du flux Shoutcast
+var i = ''; // Laissez vide pour Shoutcast
